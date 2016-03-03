@@ -7,7 +7,7 @@
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
                  [org.clojure/clojurescript "1.7.228" :scope "provided"]
                  [reagent "0.5.1"]
-                 [reagent-forms "0.5.15"]
+                 [reagent-forms "0.5.21"]
                  [reagent-utils "0.1.7"]
                  [secretary "1.2.3"]]
 
