@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
-                 [org.clojure/clojurescript "1.8.34" :scope "provided"]
+                 [org.clojure/clojurescript "1.8.40" :scope "provided"]
                  [reagent "0.5.1"]
                  [reagent-forms "0.5.22"]
                  [reagent-utils "0.1.7"]
