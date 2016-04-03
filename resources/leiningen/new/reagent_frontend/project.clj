@@ -30,11 +30,11 @@
                                         :pretty-print  true}}}}
 
   :profiles {:dev {:dependencies [[prone "1.1.0"]
-                                  [lein-figwheel "0.5.1"]
+                                  [lein-figwheel "0.5.2"]
                                   [org.clojure/tools.nrepl "0.2.12"]
                                   [com.cemerick/piggieback "0.2.1"]]
 
-                   :plugins [[lein-figwheel "0.5.1"]]
+                   :plugins [[lein-figwheel "0.5.2"]]
 
                    :figwheel {:http-server-root "public"
                               :nrepl-port 7002
