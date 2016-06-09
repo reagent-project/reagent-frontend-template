@@ -6,12 +6,10 @@
 
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
                  [org.clojure/clojurescript "1.9.36" :scope "provided"]
-                 [reagent "0.6.0-rc"]
-                 [reagent-forms "0.5.22"]
-                 [reagent-utils "0.1.7"]
-                 [secretary "1.2.3"]]
+                 [reagent "0.6.0-rc"]]
 
-  :plugins [[lein-cljsbuild "1.1.1"]]
+  :plugins [[lein-cljsbuild "1.1.3"]
+            [lein-figwheel "0.5.4-SNAPSHOT"]]
 
   :min-lein-version "2.5.0"
 
@@ -22,32 +20,32 @@
 
   :resource-paths ["public"]
 
-  :cljsbuild {:builds {:app {:source-paths ["src"]
-                             :compiler {:output-to "public/js/app.js"
-                                        :output-dir "public/js/out"
-                                        :asset-path   "js/out"
-                                        :optimizations :none
-                                        :pretty-print  true}}}}
+  :figwheel {:http-server-root "public"
+             :nrepl-port 7002
+             :nrepl-middleware ["cemerick.piggieback/wrap-cljs-repl"]
+             :css-dirs ["public/css"]}
 
-  :profiles {:dev {:dependencies [[prone "1.1.0"]
-                                  [lein-figwheel "0.5.4-SNAPSHOT"]
+  :cljsbuild {:builds {:app
+                       {:source-paths ["src" "env/dev/cljs"]
+                        :compiler
+                        {:main "{{name}}.dev"
+                         :output-to "public/js/app.js"
+                         :output-dir "public/js/out"
+                         :asset-path   "js/out"
+                         :source-map true
+                         :optimizations :none
+                         :pretty-print  true}}
+                       :release
+                       {:source-paths ["src" "env/prod/cljs"]
+                        :compiler
+                        {:output-to "public/js/app.js"
+                         :output-dir "public/js/release"
+                         :asset-path   "js/out"
+                         :optimizations :advanced
+                         :pretty-print false}}}}
+
+  :aliases {"release" ["do" "clean" ["cljsbuild" "once" "release"]]}
+
+  :profiles {:dev {:dependencies [[lein-figwheel "0.5.4-SNAPSHOT"]
                                   [org.clojure/tools.nrepl "0.2.12"]
-                                  [com.cemerick/piggieback "0.2.2-SNAPSHOT"]]
-
-                   :plugins [[lein-figwheel "0.5.4-SNAPSHOT"]]
-
-                   :figwheel {:http-server-root "public"
-                              :nrepl-port 7002
-                              :nrepl-middleware ["cemerick.piggieback/wrap-cljs-repl"]
-                              :css-dirs ["public/css"]}
-
-                   :cljsbuild {:builds {:app {:source-paths ["env/dev/cljs"]
-                                              :compiler {:main "{{project-ns}}.dev"
-                                                         :source-map true}}}}}
-
-             :prod {:cljsbuild {:jar true
-                                :builds {:app
-                                         {:source-paths ["env/prod/cljs"]
-                                          :compiler
-                                          {:optimizations :advanced
-                                           :pretty-print false}}}}}})
+                                  [com.cemerick/piggieback "0.2.2-SNAPSHOT"]]}})

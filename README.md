@@ -28,7 +28,7 @@ To start the Figwheel compiler, navigate to the project folder and run the follo
 lein figwheel
 ```
 
-Figwheel will automatically push cljs changes to the browser. 
+Figwheel will automatically push cljs changes to the browser.
 Once Figwheel starts up, you should be able to open the `public/index.html` page in the browser and see the changes refresh live. Alternatively, you could run `python -m SimpleHTTPServer` in the `public` folder.
 
 
@@ -36,7 +36,7 @@ Once Figwheel starts up, you should be able to open the `public/index.html` page
 
 ```
 lein clean
-lein with-profile prod cljsbuild once
+lein release
 ```
 
 ## Contents
@@ -44,9 +44,6 @@ lein with-profile prod cljsbuild once
 The template packages everything you need to create a production ready ClojureScript application following current best practices. The template uses the following features and libraries:
 
 * [Reagent](https://github.com/reagent-project/reagent) - ClojureScript interface to Facebook's React
-* [reagent-forms](https://github.com/reagent-project/reagent-forms) - data binding library for Reagent
-* [reagent-utils](https://github.com/reagent-project/reagent-utils) - utilities such as session and cookie management
-* [Secretary](https://github.com/gf3/secretary) - client-side routing
 
 ## Contributing & Customizing
 
