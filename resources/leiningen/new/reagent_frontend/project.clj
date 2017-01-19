@@ -20,7 +20,7 @@
 
   :resource-paths ["public"]
 
-  :figwheel {:http-server-root "public"
+  :figwheel {:http-server-root "."
              :nrepl-port 7002
              :nrepl-middleware ["cemerick.piggieback/wrap-cljs-repl"]
              :css-dirs ["public/css"]}
@@ -34,7 +34,9 @@
                          :asset-path   "js/out"
                          :source-map true
                          :optimizations :none
-                         :pretty-print  true}}
+                         :pretty-print  true}
+                        :figwheel
+                        {:open-urls ["http://localhost:3449/index.html"]}}
                        :release
                        {:source-paths ["src" "env/prod/cljs"]
                         :compiler
