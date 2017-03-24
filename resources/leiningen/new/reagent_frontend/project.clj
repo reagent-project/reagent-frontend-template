@@ -8,8 +8,8 @@
                  [org.clojure/clojurescript "1.9.495" :scope "provided"]
                  [reagent "0.6.1"]]
 
-  :plugins [[lein-cljsbuild "1.1.3"]
-            [lein-figwheel "0.5.4-5"]]
+  :plugins [[lein-cljsbuild "1.1.5"]
+            [lein-figwheel "0.5.9"]]
 
   :min-lein-version "2.5.0"
 
@@ -48,6 +48,6 @@
 
   :aliases {"release" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
-  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.4-5"]
+  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.9"]
                                   [org.clojure/tools.nrepl "0.2.12"]
                                   [com.cemerick/piggieback "0.2.2-SNAPSHOT"]]}})
