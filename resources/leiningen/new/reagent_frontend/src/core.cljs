@@ -1,5 +1,5 @@
 (ns {{project-ns}}.core
-    (:require [reagent.core :as reagent]))
+    (:require [reagent.core :as r]))
 
 ;; -------------------------
 ;; Views
@@ -11,7 +11,7 @@
 ;; Initialize app
 
 (defn mount-root []
-  (reagent/render [home-page] (.getElementById js/document "app")))
+  (r/render [home-page] (.getElementById js/document "app")))
 
 (defn init! []
   (mount-root))
