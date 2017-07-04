@@ -28,7 +28,7 @@
   :cljsbuild {:builds {:app
                        {:source-paths ["src" "env/dev/cljs"]
                         :compiler
-                        {:main "{{name}}.dev"
+                        {:main "{{project-ns}}.dev"
                          :output-to "public/js/app.js"
                          :output-dir "public/js/out"
                          :asset-path   "js/out"
@@ -36,7 +36,8 @@
                          :optimizations :none
                          :pretty-print  true}
                         :figwheel
-                        {:open-urls ["http://localhost:3449/index.html"]}}
+                        {:on-jsload "{{project-ns}}.core/mount-root"
+                         :open-urls ["http://localhost:3449/index.html"]}}
                        :release
                        {:source-paths ["src" "env/prod/cljs"]
                         :compiler
