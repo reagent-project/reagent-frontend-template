@@ -9,7 +9,7 @@
                  [reagent "0.7.0"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
-            [lein-figwheel "0.5.9"]]
+            [lein-figwheel "0.5.11"]]
 
   :min-lein-version "2.5.0"
 
@@ -48,6 +48,7 @@
 
   :aliases {"release" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
-  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.9"]
-                                  [org.clojure/tools.nrepl "0.2.12"]
-                                  [com.cemerick/piggieback "0.2.2-SNAPSHOT"]]}})
+  :profiles {:dev {:dependencies [[binaryage/devtools "0.9.4"]
+                                  [figwheel-sidecar "0.5.11"]
+                                  [org.clojure/tools.nrepl "0.2.13"]
+                                  [com.cemerick/piggieback "0.2.2"]]}})
