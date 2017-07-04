@@ -1,5 +1,6 @@
 (ns {{project-ns}}.core
-    (:require [reagent.core :as r]))
+    (:require
+      [reagent.core :as r]))
 
 ;; -------------------------
 ;; Views

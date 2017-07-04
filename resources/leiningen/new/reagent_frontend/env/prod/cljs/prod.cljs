@@ -1,5 +1,6 @@
 (ns {{project-ns}}.prod
-  (:require [{{project-ns}}.core :as core]))
+  (:require
+    [{{project-ns}}.core :as core]))
 
 ;;ignore println statements in prod
 (set! *print-fn* (fn [& _]))
