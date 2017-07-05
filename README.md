@@ -32,11 +32,11 @@ Figwheel will automatically push cljs changes to the browser.
 Once Figwheel starts up, you should be able to open the `public/index.html` page in the browser and see the changes refresh live. Alternatively, you could run `python -m SimpleHTTPServer` in the `public` folder.
 
 
-### Building for release
+### Building for production
 
 ```
 lein clean
-lein release
+lein package
 ```
 
 ## Contents
