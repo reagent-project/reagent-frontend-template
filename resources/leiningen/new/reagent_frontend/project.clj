@@ -47,7 +47,7 @@
                          :optimizations :advanced
                          :pretty-print false}}}}
 
-  :aliases {"release" ["do" "clean" ["cljsbuild" "once" "release"]]}
+  :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
   :profiles {:dev {:dependencies [[binaryage/devtools "0.9.4"]
                                   [figwheel-sidecar "0.5.11"]
