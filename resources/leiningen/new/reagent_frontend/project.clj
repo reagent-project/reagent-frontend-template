@@ -5,11 +5,11 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.908"]
+                 [org.clojure/clojurescript "1.9.946"]
                  [reagent "0.7.0"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
-            [lein-figwheel "0.5.13"]]
+            [lein-figwheel "0.5.14"]]
 
   :min-lein-version "2.5.0"
 
@@ -49,7 +49,7 @@
 
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
-  :profiles {:dev {:dependencies [[binaryage/devtools "0.9.4"]
-                                  [figwheel-sidecar "0.5.13"]
+  :profiles {:dev {:dependencies [[binaryage/devtools "0.9.7"]
+                                  [figwheel-sidecar "0.5.14"]
                                   [org.clojure/tools.nrepl "0.2.13"]
                                   [com.cemerick/piggieback "0.2.2"]]}})
