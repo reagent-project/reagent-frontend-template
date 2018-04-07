@@ -12,7 +12,9 @@
             [lein-figwheel "0.5.15"]]
 
   :min-lein-version "2.5.0"
-
+  {{#jvm-opts-hook?}}
+  :jvm-opts ["--add-modules" "java.xml.bind"]
+  {{/jvm-opts-hook?}}
   :clean-targets ^{:protect false}
   [:target-path
    [:cljsbuild :builds :app :compiler :output-dir]
