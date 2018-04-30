@@ -1,4 +1,4 @@
-(defproject reagent-frontend/lein-template "0.1.31"
+(defproject reagent-frontend/lein-template "0.1.32"
   :description "A Leiningen template for a ClojureScript setup with Reagent."
   :url "https://github.com/reagent-project/reagent-frontend-template"
   :license {:name "MIT License"

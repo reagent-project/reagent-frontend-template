@@ -27,6 +27,7 @@
       ["public/css/site.css" (render "public/css/site.css" data)]
       ["public/index.html" (render "public/index.html" data)]
       ["src/{{sanitized}}/core.cljs" (render "src/core.cljs" data)]
+      ["env/dev/clj/user.clj" (render "env/dev/clj/user.clj" data)]
       ["env/dev/cljs/{{sanitized}}/dev.cljs" (render "env/dev/cljs/dev.cljs" data)]
       ["env/prod/cljs/{{sanitized}}/prod.cljs" (render "env/prod/cljs/prod.cljs" data)]
       ["LICENSE" (render "LICENSE" data)]

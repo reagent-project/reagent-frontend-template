@@ -51,7 +51,8 @@
 
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
-  :profiles {:dev {:dependencies [[binaryage/devtools "0.9.7"]
+  :profiles {:dev {:source-paths ["src" "env/dev/clj"]
+                   :dependencies [[binaryage/devtools "0.9.7"]
                                   [figwheel-sidecar "0.5.15"]
                                   [org.clojure/tools.nrepl "0.2.13"]
                                   [com.cemerick/piggieback "0.2.2"]]}})
