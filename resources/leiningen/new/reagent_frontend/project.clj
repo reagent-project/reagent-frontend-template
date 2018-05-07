@@ -9,7 +9,7 @@
                  [reagent "0.8.0"]]
 
   :plugins [[lein-cljsbuild "1.1.5"]
-            [lein-figwheel "0.5.15"]]
+            [lein-figwheel "0.5.16"]]
 
   :min-lein-version "2.5.0"
   {{#jvm-opts-hook?}}
@@ -53,6 +53,6 @@
 
   :profiles {:dev {:source-paths ["src" "env/dev/clj"]
                    :dependencies [[binaryage/devtools "0.9.7"]
-                                  [figwheel-sidecar "0.5.15"]
+                                  [figwheel-sidecar "0.5.16"]
                                   [org.clojure/tools.nrepl "0.2.13"]
                                   [com.cemerick/piggieback "0.2.2"]]}})
