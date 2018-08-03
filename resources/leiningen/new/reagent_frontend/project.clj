@@ -24,7 +24,7 @@
 
   :figwheel {:http-server-root "."
              :nrepl-port 7002
-             :nrepl-middleware ["cemerick.piggieback/wrap-cljs-repl"]
+             :nrepl-middleware [cider/wrap-cljs-repl cider.piggieback/wrap-cljs-repl]
              :css-dirs ["public/css"]}
 
   :cljsbuild {:builds {:app
@@ -52,7 +52,7 @@
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
   :profiles {:dev {:source-paths ["src" "env/dev/clj"]
-                   :dependencies [[binaryage/devtools "0.9.7"]
+                   :dependencies [[binaryage/devtools "0.9.10"]
                                   [figwheel-sidecar "0.5.16"]
-                                  [org.clojure/tools.nrepl "0.2.13"]
-                                  [com.cemerick/piggieback "0.2.2"]]}})
+                                  [nrepl "0.4.4"]
+                                  [cider/piggieback "0.3.8"]]}})
