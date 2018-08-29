@@ -32,6 +32,11 @@ Figwheel will automatically push cljs changes to the browser.
 Once Figwheel starts up, you should be able to open the `public/index.html` page in the browser and see the changes refresh live. Alternatively, you could run `python -m SimpleHTTPServer` in the `public` folder.
 
 
+### REPL
+
+The project is setup to start nREPL on port `7002` once Figwheel starts.
+Once you connect to the nREPL, run `(cljs)` to switch to the ClojureScript REPL.
+
 ### Building for production
 
 ```
