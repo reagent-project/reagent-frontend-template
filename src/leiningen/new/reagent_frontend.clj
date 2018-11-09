@@ -14,7 +14,6 @@
 (defn template-data [name]
   {:full-name name
    :name (project-name name)
-   :jvm-opts-hook? (jvm>8?)
    :project-goog-module (sanitize (sanitize-ns name))
    :project-ns (sanitize-ns name)
    :sanitized (name-to-path name)})
