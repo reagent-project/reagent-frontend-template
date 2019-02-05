@@ -43,6 +43,7 @@
                          :output-dir "public/js/release"
                          :asset-path   "js/out"
                          :optimizations :advanced
+                         :infer-externs true
                          :pretty-print false}}}}
 
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
