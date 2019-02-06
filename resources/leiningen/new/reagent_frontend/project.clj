@@ -51,5 +51,5 @@
   :profiles {:dev {:source-paths ["src" "env/dev/clj"]
                    :dependencies [[binaryage/devtools "0.9.10"]
                                   [figwheel-sidecar "0.5.18"]
-                                  [nrepl "0.5.3"]
+                                  [nrepl "0.6.0"]
                                   [cider/piggieback "0.3.10"]]}})
