@@ -14,11 +14,18 @@ For any questions or discussion please come join us at the [Reagent Google Group
 
 ## Usage
 
-Create a new application project:
+Create a new application project with Figwheel:
 
 ```
 lein new reagent-frontend <name>
 ```
+
+Create a new application project with shadow-cljs:
+
+```
+lein new reagent-frontend <name> +shadow-cljs
+```
+
 
 ### Development mode
 

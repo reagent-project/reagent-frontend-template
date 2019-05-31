@@ -1,3 +1,9 @@
+{{#shadow-cljs-hook?}}
+(ns user (:require [ring.middleware.resource :refer [wrap-resource]]))
+
+(def app (wrap-resource identity "public"))
+{{/shadow-cljs-hook?}}
+{{#figwheel-hook?}}
 (ns user
  (:require [figwheel-sidecar.repl-api :as ra]))
 
@@ -9,3 +15,4 @@
 
 (defn cljs []
  (ra/cljs-repl))
+{{/figwheel-hook?}}

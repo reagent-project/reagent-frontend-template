@@ -1,0 +1,10 @@
+{:lein         true
+ :source-paths ["src"]
+ :builds       {:app {:target     :browser
+                      :output-dir "public/js"
+                      :asset-path "/js"
+                      :modules    {:app {:entries [{{project-ns}}.core]}}
+                      :devtools   {:after-load {{project-ns}}.core/mount-root}}}
+
+ :dev-http     {3000 {:root    "public"
+                      :handler user/app}}}

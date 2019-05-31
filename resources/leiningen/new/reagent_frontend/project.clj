@@ -7,16 +7,28 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/clojurescript "1.10.520"]
                  [reagent "0.8.1"]]
-
+{{#shadow-cljs-hook?}}
+  :profiles {:dev {:source-paths ["src" "env/dev/clj"]
+                   :dependencies [[binaryage/devtools "0.9.10"]
+                                  [com.google.javascript/closure-compiler-unshaded "v20190325"]
+                                  [org.clojure/google-closure-library "0.0-20190213-2033d5d9"]
+                                  [figwheel-sidecar "0.5.18"]
+                                  [nrepl "0.6.0"]
+                                  [ring/ring-core "1.7.0-RC1"]
+                                  [thheller/shadow-cljs "2.8.37"]
+                                  [cider/piggieback "0.4.0"]]}})
+{{/shadow-cljs-hook?}}{{#figwheel-hook?}}
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.18"]]
 
   :clean-targets ^{:protect false}
+
   [:target-path
    [:cljsbuild :builds :app :compiler :output-dir]
    [:cljsbuild :builds :app :compiler :output-to]]
 
   :resource-paths ["public"]
+
 
   :figwheel {:http-server-root "."
              :nrepl-port 7002
@@ -52,3 +64,4 @@
                                   [figwheel-sidecar "0.5.18"]
                                   [nrepl "0.6.0"]
                                   [cider/piggieback "0.4.0"]]}})
+{{/figwheel-hook?}}

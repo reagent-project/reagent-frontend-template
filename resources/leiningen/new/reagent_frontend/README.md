@@ -1,6 +1,12 @@
 
 ### Development mode
-
+{{#shadow-cljs-hook?}}
+```
+npm install
+npx shadow-cljs browser-repl
+```
+{{/shadow-cljs-hook?}}
+{{#figwheel-hook?}}
 To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:
 
 ```
@@ -21,3 +27,4 @@ Once you connect to the nREPL, run `(cljs)` to switch to the ClojureScript REPL.
 lein clean
 lein package
 ```
+{{/figwheel-hook?}}
