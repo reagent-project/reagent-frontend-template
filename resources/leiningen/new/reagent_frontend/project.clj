@@ -4,7 +4,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.10.0"]
+  :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.520"]
                  [reagent "0.8.1"]]
 {{#shadow-cljs-hook?}}
@@ -15,8 +15,8 @@
                                   [figwheel-sidecar "0.5.18"]
                                   [nrepl "0.6.0"]
                                   [ring/ring-core "1.7.0-RC1"]
-                                  [thheller/shadow-cljs "2.8.37"]
-                                  [cider/piggieback "0.4.0"]]}})
+                                  [thheller/shadow-cljs "2.8.39"]
+                                  [cider/piggieback "0.4.1"]]}})
 {{/shadow-cljs-hook?}}{{#figwheel-hook?}}
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.18"]]
@@ -63,5 +63,5 @@
                    :dependencies [[binaryage/devtools "0.9.10"]
                                   [figwheel-sidecar "0.5.18"]
                                   [nrepl "0.6.0"]
-                                  [cider/piggieback "0.4.0"]]}})
+                                  [cider/piggieback "0.4.1"]]}})
 {{/figwheel-hook?}}
