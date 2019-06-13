@@ -14,5 +14,5 @@
 (defn mount-root []
   (r/render [home-page] (.getElementById js/document "app")))
 
-(defn init! []
+(defn {{#shadow-cljs-hook?}}^:export {{/shadow-cljs-hook?}}init! []
   (mount-root))

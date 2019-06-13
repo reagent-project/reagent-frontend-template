@@ -28,3 +28,8 @@ lein clean
 lein package
 ```
 {{/figwheel-hook?}}
+{{#shadow-cljs-hook?}}
+```
+npx shadow-cljs release app
+```
+{{/shadow-cljs-hook?}}
