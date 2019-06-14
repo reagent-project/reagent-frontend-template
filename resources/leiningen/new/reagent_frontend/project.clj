@@ -12,7 +12,6 @@
                    :dependencies [[binaryage/devtools "0.9.10"]
                                   [com.google.javascript/closure-compiler-unshaded "v20190325"]
                                   [org.clojure/google-closure-library "0.0-20190213-2033d5d9"]
-                                  [figwheel-sidecar "0.5.18"]
                                   [nrepl "0.6.0"]
                                   [ring/ring-core "1.7.0-RC1"]
                                   [thheller/shadow-cljs "2.8.39"]
