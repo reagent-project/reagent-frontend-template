@@ -29,6 +29,8 @@ lein package
 ```
 {{/figwheel-hook?}}
 {{#shadow-cljs-hook?}}
+### Building for production
+
 ```
 npx shadow-cljs release app
 ```
