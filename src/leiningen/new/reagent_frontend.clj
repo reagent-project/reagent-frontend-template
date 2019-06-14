@@ -31,10 +31,14 @@
     (compiler opts)))
 
 (defn shadow-cljs-assets [data]
-  [["package.json" (render "package.json" data)]
-   ["shadow-cljs.edn" (render "shadow-cljs.edn" data)]
-   ["project.clj" (render "project.clj" data)]
-   ["project.clj" (render "project.clj" data)]])
+  [["src/user.clj" (render "env/dev/clj/user.clj" data)]
+   ["package.json" (render "package.json" data)]
+   ["shadow-cljs.edn" (render "shadow-cljs.edn" data)]])
+
+(defn figwheel-assets [data]
+  [["env/dev/clj/user.clj" (render "env/dev/clj/user.clj" data)]
+   ["env/dev/cljs/{{sanitized}}/dev.cljs" (render "env/dev/cljs/dev.cljs" data)]
+   ["env/prod/cljs/{{sanitized}}/prod.cljs" (render "env/prod/cljs/prod.cljs" data)]])
 
 (defn generate [name opts]
   (let [data (template-data name opts)]
@@ -45,13 +49,12 @@
       ["public/css/site.css" (render "public/css/site.css" data)]
       ["public/index.html" (render "public/index.html" data)]
       ["src/{{sanitized}}/core.cljs" (render "src/core.cljs" data)]
-      ["env/dev/clj/user.clj" (render "env/dev/clj/user.clj" data)]
-      ["env/dev/cljs/{{sanitized}}/dev.cljs" (render "env/dev/cljs/dev.cljs" data)]
-      ["env/prod/cljs/{{sanitized}}/prod.cljs" (render "env/prod/cljs/prod.cljs" data)]
       ["LICENSE" (render "LICENSE" data)]
       ["README.md" (render "README.md" data)]
       [".gitignore" (render "gitignore" data)]
-      (when (shadow-cljs? opts) (shadow-cljs-assets data)))))
+      (if (shadow-cljs? opts)
+        (shadow-cljs-assets data)
+        (figwheel-assets data)))))
 
 (defn reagent-frontend [name & opts]
   (main/info "Generating fresh 'lein new' Reagent frontend project.")
