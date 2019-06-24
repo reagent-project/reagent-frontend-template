@@ -3,6 +3,10 @@
 {{#shadow-cljs-hook?}}
 ```
 npm install
+npx shadow-cljs watch app
+```
+start a ClojureScript REPL
+```
 npx shadow-cljs browser-repl
 ```
 {{/shadow-cljs-hook?}}
