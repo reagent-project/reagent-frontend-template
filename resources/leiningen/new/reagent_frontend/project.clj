@@ -18,7 +18,7 @@
                                   [cider/piggieback "0.4.1"]]}})
 {{/shadow-cljs-hook?}}{{#figwheel-hook?}}
   :plugins [[lein-cljsbuild "1.1.7"]
-            [lein-figwheel "0.5.18"]]
+            [lein-figwheel "0.5.19"]]
 
   :clean-targets ^{:protect false}
 
@@ -60,7 +60,7 @@
 
   :profiles {:dev {:source-paths ["src" "env/dev/clj"]
                    :dependencies [[binaryage/devtools "0.9.10"]
-                                  [figwheel-sidecar "0.5.18"]
+                                  [figwheel-sidecar "0.5.19"]
                                   [nrepl "0.6.0"]
                                   [cider/piggieback "0.4.1"]]}})
 {{/figwheel-hook?}}
