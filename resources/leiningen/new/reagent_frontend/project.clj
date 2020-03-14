@@ -6,7 +6,7 @@
 
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.597"]
-                 [reagent "0.9.0-rc3"]]
+                 [reagent "0.10.0"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-figwheel "0.5.19"]]
@@ -41,7 +41,7 @@
                        {:source-paths ["src" "env/prod/cljs"]
                         :compiler
                         {:output-to "public/js/app.js"
-                         :output-dir "public/js/release"
+                         :output-dir "target/release"
                          :optimizations :advanced
                          :infer-externs true
                          :pretty-print false}}}}
@@ -49,7 +49,7 @@
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
   :profiles {:dev {:source-paths ["src" "env/dev/clj"]
-                   :dependencies [[binaryage/devtools "0.9.11"]
+                   :dependencies [[binaryage/devtools "1.0.0"]
                                   [figwheel-sidecar "0.5.19"]
                                   [nrepl "0.6.0"]
                                   [cider/piggieback "0.4.2"]]}})
