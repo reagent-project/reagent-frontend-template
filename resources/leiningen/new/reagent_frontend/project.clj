@@ -5,7 +5,7 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.10.1"]
-                 [org.clojure/clojurescript "1.10.597"]
+                 [org.clojure/clojurescript "1.10.741"]
                  [reagent "0.10.0"]]
 
   :plugins [[lein-cljsbuild "1.1.7"]
@@ -51,5 +51,5 @@
   :profiles {:dev {:source-paths ["src" "env/dev/clj"]
                    :dependencies [[binaryage/devtools "1.0.0"]
                                   [figwheel-sidecar "0.5.19"]
-                                  [nrepl "0.6.0"]
+                                  [nrepl "0.7.0"]
                                   [cider/piggieback "0.4.2"]]}})
