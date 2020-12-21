@@ -13,13 +13,13 @@
 
 (def valid-opts ["+figwheel" "+shadow-cljs"])
 
-(defn shadow-cljs? [opts]
-      (some #{"+shadow-cljs"} opts))
+(defn figwheel? [opts]
+      (some #{"+figwheel"} opts))
 
 (defn compiler [opts]
-      (if (shadow-cljs? opts)
-        {:shadow-cljs-hook? true}
-        {:figwheel-hook? true}))
+      (if (figwheel? opts)
+        {:figwheel-hook? true}
+        {:shadow-cljs-hook? true}))
 
 (defn template-data [name opts]
   (merge
@@ -52,9 +52,9 @@
       ["LICENSE" (render "LICENSE" data)]
       ["README.md" (render "README.md" data)]
       [".gitignore" (render "gitignore" data)]
-      (if (shadow-cljs? opts)
-        (shadow-cljs-assets data)
-        (figwheel-assets data)))))
+      (if (figwheel? opts)
+        (figwheel-assets data)
+        (shadow-cljs-assets data)))))
 
 (defn reagent-frontend [name & opts]
   (main/info "Generating fresh 'lein new' Reagent frontend project.")

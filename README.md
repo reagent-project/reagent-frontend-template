@@ -14,20 +14,37 @@ For any questions or discussion please come join us at the [Reagent Google Group
 
 ## Usage
 
-Create a new application project with Figwheel:
+### shadow-cljs
+
+Create a new application project with shadow-cljs:
 
 ```
 lein new reagent-frontend <name>
 ```
 
-Create a new application project with shadow-cljs:
+#### Development mode
+
+To start the app in development mode run:
 
 ```
-lein new reagent-frontend <name> +shadow-cljs
+npx shadow-cljs watch app
 ```
 
+#### Building for production
 
-### Development mode
+```
+npx shadow-cljs release app
+```
+
+### Figwheel
+
+Create a new application project with Figwheel:
+
+```
+lein new reagent-frontend <name> +figwheel
+```
+
+#### Development mode
 
 To start the Figwheel compiler, navigate to the project folder and run the following command in the terminal:
 
@@ -38,18 +55,18 @@ lein figwheel
 Figwheel will automatically push cljs changes to the browser.
 Once Figwheel starts up, you should be able to open the `public/index.html` page in the browser and see the changes refresh live. Alternatively, you could run `python -m SimpleHTTPServer` in the `public` folder.
 
+#### Building for production
+
+```
+lein clean
+lein package
+```
 
 ### REPL
 
 The project is setup to start nREPL on port `7002` once Figwheel starts.
 Once you connect to the nREPL, run `(cljs)` to switch to the ClojureScript REPL.
 
-### Building for production
-
-```
-lein clean
-lein package
-```
 
 ## Contents
 
