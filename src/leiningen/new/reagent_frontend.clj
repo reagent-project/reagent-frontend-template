@@ -49,7 +49,7 @@
       ["public/css/site.css" (render "public/css/site.css" data)]
       ["public/index.html" (render "public/index.html" data)]
       ["src/{{sanitized}}/core.cljs" (render "src/core.cljs" data)]
-      ["LICENSE" (render "LICENSE" data)]
+      #_["LICENSE" (render "LICENSE" data)]
       ["README.md" (render "README.md" data)]
       [".gitignore" (render "gitignore" data)]
       (if (figwheel? opts)
