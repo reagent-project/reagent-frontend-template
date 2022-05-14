@@ -4,8 +4,8 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.10.3"]
-                 [org.clojure/clojurescript "1.10.891"]
+  :dependencies [[org.clojure/clojure "1.11.1"]
+                 [org.clojure/clojurescript "1.11.51"]
                  [reagent "1.1.1"]
                  [cljsjs/react "17.0.2-0"]
                  [cljsjs/react-dom "17.0.2-0"]]
@@ -53,5 +53,5 @@
   :profiles {:dev {:source-paths ["src" "env/dev/clj"]
                    :dependencies [[binaryage/devtools "1.0.2"]
                                   [figwheel-sidecar "0.5.20"]
-                                  [nrepl "0.8.3"]
+                                  [nrepl "0.9.0"]
                                   [cider/piggieback "0.5.2"]]}})
