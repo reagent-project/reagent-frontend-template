@@ -19,7 +19,7 @@ For any questions or discussion please come join us at the [Reagent Google Group
 Create a new application project with shadow-cljs:
 
 ```
-lein new reagent-frontend <name>
+lein new reagent-frontend <name> +shadow-cljs
 ```
 
 #### Development mode
