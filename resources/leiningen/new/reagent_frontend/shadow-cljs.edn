@@ -1,6 +1,6 @@
 {:source-paths ["src"]
  :dependencies [[binaryage/devtools "1.0.6"]
-                [nrepl "0.9.0"]
+                [nrepl "1.0.0"]
                 [reagent "1.1.1"]]
  :builds       {:app {:target     :browser
                       :output-dir "public/js"
@@ -8,5 +8,4 @@
                       :modules    {:app {:entries [{{project-ns}}.core]}}
                       :devtools   {:after-load {{project-ns}}.core/mount-root}}}
 
- :dev-http     {3000 {:root    "public"
-                      :handler user/app}}}
+ :dev-http     {3000 {:root "public"}}}
