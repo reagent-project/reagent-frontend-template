@@ -50,7 +50,7 @@
 
   :aliases {"package" ["do" "clean" ["cljsbuild" "once" "release"]]}
 
-  :profiles {:dev {:source-paths ["src" "env/dev/clj"]
+  :profiles {:dev {:source-paths ["src" "env/dev/clj" "env/dev/cljs"]
                    :dependencies [[binaryage/devtools "1.0.6"]
                                   [figwheel-sidecar "0.5.21-SNAPSHOT"]
                                   [nrepl "1.0.0"]
